@@ -9,17 +9,10 @@ $git_branch\
 $git_status\
 [](fg:#FCA17D bg:#86BBD8)\
 $c\
-$elixir\
-$elm\
 $golang\
-$gradle\
-$haskell\
-$java\
-$julia\
 $nodejs\
-$nim\
+$python\
 $rust\
-$scala\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
@@ -74,16 +67,6 @@ symbol = " "
 style = "bg:#06969A"
 format = '[ $symbol $context ]($style)'
 
-[elixir]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[elm]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
 [git_branch]
 symbol = ""
 style = "bg:#FCA17D"
@@ -102,43 +85,14 @@ format = '[ $symbol ($version) ]($style)'
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
-[haskell]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[java]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[julia]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[nim]
-symbol = "󰆥 "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[rust]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[scala]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
 format = '[ ♥ $time ]($style)'
+
+[python]
+symbol = "🐍"
+style = "bg:#86BBD8"
+format = "[ $symbol ($version)(\($virtualenv\))]($style)"

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+. "$(chezmoi source-path)/helpers"
+
+echo ''
+
+
+if ! [ -x "$(command -v sharship)" ]; then
+    info '🚀 Installing starship shell prompt'
+    curl -sS https://starship.rs/install.sh | sh
+    success 'starship'
+else
+    skip 'starship'
+fi
