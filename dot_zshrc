@@ -1,2 +1,7 @@
+#!/bin/bash
+
+source ~/.aliases_git
+source ~/.exports_shell
+
 eval "$(starship init zsh)"
 

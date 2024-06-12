@@ -21,7 +21,10 @@ $time\
 """
 
 # Disable the blank line at the start of the prompt
-# add_newline = false
+add_newline = true
+
+command_timeout = 1000
+scan_timeout = 60
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
@@ -100,3 +103,6 @@ format = '[ ♥ $time ]($style)'
 symbol = "🐍"
 style = "bg:#86BBD8"
 format = '[ $symbol ($version)(\($virtualenv\))]($style)'
+
+
+
