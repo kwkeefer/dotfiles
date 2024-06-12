@@ -56,3 +56,9 @@ blue = '0x4894fd'
 magenta = '0xe01dca'
 cyan ='0x1ab2ad'
 white =  '0xe6f6f6'
+
+[keyboard]
+bindings = [
+  { key = "Space", mods = "Shift", action = "ToggleViMode" },
+  { key = "q", mode = "Vi", action = "ToggleViMode" },
+]

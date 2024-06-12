@@ -1,14 +1,13 @@
 #!/bin/bash
 
 alias gst='git status'
-alias gcm="git checkout `git_main_branch`"
-alias gcd="git checkout `git_develop_branch`"
+alias gcm="git checkout $(main_branch)"
 alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gcor="git checkout --recurse-submodules"
-alias ggpush="git push origin `current_branch`"
+alias ggpush="git push origin HEAD"
 alias ggp=ggpush
-alias ggpull="git pull origin `current_branch`"
+alias ggpull="git pull origin HEAD"
 alias ggl=ggpull
 alias gcl="git clone --recurse-submodules"
 
