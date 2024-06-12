@@ -25,7 +25,6 @@ blur = true
 history = 10000
 multiplier = 3
 
-
 [shell]
 program = '/usr/local/bin/fish'
 args = ['--login']

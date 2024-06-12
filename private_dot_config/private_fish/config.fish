@@ -1,3 +1,4 @@
+source ~/.aliases_git
 
 # keep at end of file
 ~/.local/bin/mise activate fish | source

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+. "$(chezmoi source-path)/helpers"
+
+echo ''
+
+if ! [ -x "$(command -v tldr)" ]; then
+    info '🖥️ Installing tldr'
+    mise install npm:tldr
+    success 'tldr'
+else
+    skip 'tldr'
+fi

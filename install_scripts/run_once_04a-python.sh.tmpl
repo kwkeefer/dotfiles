@@ -1,0 +1,24 @@
+#!/bin/sh
+
+. "$(chezmoi source-path)/helpers"
+
+echo ''
+
+{{ if eq .chezmoi.os "linux" -}}
+
+info "🐍 Installing latest python"
+mise use python@latest
+success "python"
+
+{{ else if eq .chezmoi.os "darwin" -}}
+
+
+# set python@3.10 as global python (AET)
+info "🐍 Installing python latest and 3.10"
+mise install python@latest python@3.10
+mise use --global python@3.10
+success "python"
+
+{{ end -}}
+
+echo ''
