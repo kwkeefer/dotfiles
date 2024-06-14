@@ -1,7 +1,7 @@
 #!/bin/bash
 
 alias gst='git status'
-alias gcm="git checkout $(main_branch)"
+alias gcm="git checkout master"
 alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gcor="git checkout --recurse-submodules"
