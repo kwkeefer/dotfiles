@@ -4,6 +4,8 @@
 
 echo ''
 
+curl https://mise.run | sh
+
 {{ if eq .chezmoi.os "linux" -}}
 
 mise use python@latest
