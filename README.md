@@ -2,4 +2,5 @@
 
 ## Setup
 
-1. Install `yadm` [README](https://yadm.io/docs/install)
+1. Install `chezmoi` [README](https://www.chezmoi.io/install/)
+2. 
