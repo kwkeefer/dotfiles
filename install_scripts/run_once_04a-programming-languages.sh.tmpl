@@ -21,4 +21,14 @@ success "python"
 
 {{ end -}}
 
+mise settings set experimental true
+
+info "Installing latest golang"
+mise use -g go@latest
+success "golang"
+
+info "Installing latest node"
+mise use -g node@latest
+success "node"
+
 echo ''

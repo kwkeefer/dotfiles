@@ -1,0 +1,23 @@
+#!/bin/sh
+
+. "$(chezmoi source-path)/helpers"
+
+echo ''
+info '🖥️ Installing tldr'
+mise use -g npm:tldr
+success 'tldr'
+
+info 'Installing anew'
+mise use -g go:github.com/tomnomnom/anew@latest
+success 'anew'
+
+info 'Installing assetfinder'
+mise use -g go:github.com/tomnomnom/assetfinder
+success 'assetfinder'
+
+info 'Installing gf'
+mise use -g go:github.com/tomnomnom/gf
+success 'gf'
+
+echo ''
+
