@@ -10,4 +10,5 @@ alias ggp=ggpush
 alias ggpull="git pull origin HEAD"
 alias ggl=ggpull
 alias gcl="git clone --recurse-submodules"
+alias empty_commit="git commit --allow-empty -m 'Empty commit'"
 
