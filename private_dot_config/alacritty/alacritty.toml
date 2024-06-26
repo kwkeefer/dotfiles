@@ -59,6 +59,6 @@ white =  '0xe6f6f6'
 
 [keyboard]
 bindings = [
-  { key = "Space", mods = "Shift", action = "ToggleViMode" },
+  { key = "Escape", mods = "Shift", action = "ToggleViMode" },
   { key = "q", mode = "Vi", action = "ToggleViMode" },
 ]
