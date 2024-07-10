@@ -57,8 +57,4 @@ magenta = '0xe01dca'
 cyan ='0x1ab2ad'
 white =  '0xe6f6f6'
 
-[keyboard]
-bindings = [
-  { key = "Escape", mods = "Shift", action = "ToggleViMode" },
-  { key = "q", mode = "Vi", action = "ToggleViMode" },
-]
+
