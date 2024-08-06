@@ -24,10 +24,10 @@ for font in "${fonts[@]}"; do
   ./install.sh $font
 
   {{ end -}}
-
-  cd ..
-  rm -rf nerd-fonts
-  success "$font Nerd Font"
-
   echo ''
 done
+
+cd ..
+rm -rf nerd-fonts
+success "$font Nerd Font"
+echo ''
