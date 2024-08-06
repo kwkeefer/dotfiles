@@ -2,15 +2,15 @@
 size = 14
 
 [font.normal]
-family = ["FiraCode Nerd Font Propo", "FiraCode Nerd Font", "Fira Code", "Monospace"]
+family = "{{ if eq .chezmoi.os "darwin" }}FiraCode Nerd Font Propo{{ else }}FiraCode Nerd Font{{ end }}"
 style = "Regular"
 
 [font.bold]
-family = ["FiraCode Nerd Font Propo", "FiraCode Nerd Font", "Fira Code", "Monospace"]
+family = "{{ if eq .chezmoi.os "darwin" }}FiraCode Nerd Font Propo{{ else }}FiraCode Nerd Font{{ end }}"
 style = "Bold"
 
 [font.italic]
-family = ["FiraCode Nerd Font Propo", "FiraCode Nerd Font", "Fira Code", "Monospace"]
+family = "{{ if eq .chezmoi.os "darwin" }}FiraCode Nerd Font Propo{{ else }}FiraCode Nerd Font{{ end }}"
 style = "Italic"
 
 [selection]
