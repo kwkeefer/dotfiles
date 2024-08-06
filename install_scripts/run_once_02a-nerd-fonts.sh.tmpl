@@ -21,7 +21,7 @@ for font in "${fonts[@]}"; do
 
   {{ else if eq .chezmoi.os "linux" -}}
 
-  powershell.exe -File ./install.ps1 $font
+  ./install.sh $font
 
   {{ end -}}
 
