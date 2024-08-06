@@ -26,7 +26,7 @@ history = 10000
 multiplier = 3
 
 [shell]
-program = '{{ output "which" "fish" }}'
+program = '{{ output "which" "fish" | trim }}'
 args = ['--login']
 
 [colors]
