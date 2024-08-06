@@ -13,7 +13,7 @@ fonts=("JetBrainsMono" "Hack" "FiraCode" "CascadiaCode")
 for font in "${fonts[@]}"; do
   info "📄 Installing $font Nerd Font"
 
-  git sparse-checkout add patched-fonts/$font
+  git sparse-checkout set patched-fonts/$font
 
   {{ if eq .chezmoi.os "darwin" -}}
 
@@ -24,10 +24,11 @@ for font in "${fonts[@]}"; do
   ./install.sh $font
 
   {{ end -}}
+  
+  success "$font Nerd Font installed"
   echo ''
 done
 
 cd ..
 rm -rf nerd-fonts
-success "$font Nerd Font"
 echo ''
