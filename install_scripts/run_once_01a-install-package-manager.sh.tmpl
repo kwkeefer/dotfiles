@@ -47,7 +47,7 @@ fi
 # Source the configuration file to make mise available in the current session
 case "${SHELL:-}" in
 */zsh|*/bash)
-    . "$config_file"
+    source "$config_file"
     ;;
 */fish)
     fish -c "source $config_file"
