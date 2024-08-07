@@ -35,13 +35,13 @@ fi
 
 binary_path="/home/$USER/.local/bin"
 
+sudo apt update
+sudo apt install -y nmap libpcap-dev build-essential
+success 'nmap libpcap'
+
 if command_exists msfconsole; then
     skip 'metasploit'
 else
-    sudo apt update
-    sudo apt install -y nmap libpcap-dev
-    success 'nmap libpcap'
-
     info 'installing metasploit'
 
     mkdir -p /tmp/metasploit
