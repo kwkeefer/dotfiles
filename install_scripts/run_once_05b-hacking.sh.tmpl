@@ -77,7 +77,10 @@ mise use -g go:github.com/projectdiscovery/uncover/cmd/uncover@latest
 success 'uncover'
 
 info '🖥️ Installing katana'
-mise use -g go@1.18:github.com/projectdiscovery/katana/cmd/katana@latest
+mise install go@1.18
+mise use go@1.18
+mise use -g go@:github.com/projectdiscovery/katana/cmd/katana@latest
+mise use go@default
 success 'katana'
 
 info '🖥️ Installing naabu'

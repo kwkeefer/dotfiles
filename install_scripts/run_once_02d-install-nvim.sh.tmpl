@@ -8,21 +8,21 @@ echo ''
 
 if ! [ -x "$(command -v nvim)" ]; then
     info '🖥️ Installing nvim'
-    brew install nvim
-    success 'nvim'
+    brew install neovim
+    success 'neovim'
 else
-    skip 'nvim'
+    skip 'neovim'
 fi
 
 {{ else if eq .chezmoi.os "linux" -}}
 
 if ! [ -x "$(command -v nvim)" ]; then
-    info '🖥️ Installing nvim'
+    info '🖥️ Installing neovim'
     sudo apt update
-    sudo apt install nvim
-    success 'nvim'
+    sudo apt install neovim
+    success 'neovim'
 else
-    skip 'nvim'
+    skip 'neovim'
 fi
 
 {{ end -}}
