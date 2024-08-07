@@ -1,0 +1,31 @@
+#!/bin/bash
+
+. "$(chezmoi source-path)/helpers"
+
+echo ''
+
+{{ if eq .chezmoi.os "darwin" -}}
+
+if ! [ -x "$(command -v nvim)" ]; then
+    info '🖥️ Installing nvim'
+    brew install nvim
+    success 'nvim'
+else
+    skip 'nvim'
+fi
+
+{{ else if eq .chezmoi.os "linux" -}}
+
+if ! [ -x "$(command -v nvim)" ]; then
+    info '🖥️ Installing nvim'
+    sudo apt update
+    sudo apt install nvim
+    success 'nvim'
+else
+    skip 'nvim'
+fi
+
+{{ end -}}
+
+
+echo ''

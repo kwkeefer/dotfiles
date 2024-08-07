@@ -16,6 +16,52 @@ confirm_proceed
 
 # pdtm -i nuclei,uncover,proxify,katana,naabu,cvemap,tlsx,dnsx,subfinder,shuffledns,httpx
 
+## MACBOOK TOOLS
+{{ if eq .chezmoi.os "darwin" -}}
+
+if ! [ -x "$(command -v nmap)" ]; then
+    info '🖥️ Installing nmap'
+    brew install nmap libpcap
+    success 'nmap libpcap'
+else
+    skip 'nmap libpcap'
+fi
+
+## UBUNTU TOOLS
+{{ else if eq .chezmoi.os "linux" -}}
+
+if ! [ -x "$(command -v nmap)" ]; then
+    info '🖥️ Installing nmap'
+    sudo apt update
+    sudo apt install -y nmap libpcap-dev
+    success 'nmap libpcap'
+else
+    skip 'nmap libpcap'
+fi
+
+if ! [ -x "$(command -v msfconsole)"]; then
+    info 'installing metasploit'
+
+    mkdir -p /tmp/metasploit
+    cd /tmp/metasploit
+
+    # Install metasploit
+    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+
+    chmod 755 msfinstall
+    ./msfinstall
+
+    # Create msf database.
+    msfdb init
+else
+    skip 'metasploit'
+fi
+
+
+{{ end -}}
+
+
+
 
 echo ''
 info '🖥️ Installing nuclei'
@@ -31,7 +77,7 @@ mise use -g go:github.com/projectdiscovery/uncover/cmd/uncover@latest
 success 'uncover'
 
 info '🖥️ Installing katana'
-mise use -g go:github.com/projectdiscovery/katana/cmd/katana@latest
+mise use -g go@1.18:github.com/projectdiscovery/katana/cmd/katana@latest
 success 'katana'
 
 info '🖥️ Installing naabu'
@@ -81,48 +127,4 @@ success 'gowitness'
 info '🖥️ Installing cook'
 mise use -g go:github.com/glitchedgitz/cook/v2/cmd/cook@latest
 success 'cook'
-
-## MACBOOK TOOLS
-{{ if eq .chezmoi.os "darwin" -}}
-
-if ! [ -x "$(command -v nmap)" ]; then
-    info '🖥️ Installing nmap'
-    brew install nmap
-    success 'nmap'
-else
-    skip 'nmap'
-fi
-
-## UBUNTU TOOLS
-{{ else if eq .chezmoi.os "linux" -}}
-
-if ! [ -x "$(command -v nmap)" ]; then
-    info '🖥️ Installing nmap'
-    sudo apt update
-    sudo apt install nmap
-    success 'nmap'
-else
-    skip 'nmap'
-fi
-
-if ! [ -x "$(command -v msfconsole)"]; then
-    info 'installing metasploit'
-
-    mkdir -p /tmp/metasploit
-    cd /tmp/metasploit
-
-    # Install metasploit
-    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
-
-    chmod 755 msfinstall
-    ./msfinstall
-
-    # Create msf database.
-    msfdb init
-else
-    skip 'metasploit'
-fi
-
-{{ end -}}
-
 echo ''
