@@ -12,6 +12,8 @@ info 'Installing pdtm (project discovery tool manager)'
 mise use -g go:github.com/projectdiscovery/pdtm/cmd/pdtm@latest
 success 'pdtm'
 
+PATH="$PDTM_PATH:$PATH"
+
 # Add $HOME/.pdtm/go/bin to PATH for both Bash and Fish
 PDTM_PATH="$HOME/.pdtm/go/bin"
 PATH_EXPORT_LINE="export PATH=\"$PDTM_PATH:\$PATH\""
