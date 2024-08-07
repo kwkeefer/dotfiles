@@ -30,32 +30,24 @@ fi
 ## UBUNTU TOOLS
 {{ else if eq .chezmoi.os "linux" -}}
 
-if ! [ -x "$(command -v nmap)" ]; then
-    info '🖥️ Installing nmap'
-    sudo apt update
-    sudo apt install -y nmap libpcap-dev
-    success 'nmap libpcap'
-else
-    skip 'nmap libpcap'
-fi
+sudo apt update
+sudo apt install -y nmap libpcap-dev
+success 'nmap libpcap'
 
-if ! [ -x "$(command -v msfconsole)"]; then
-    info 'installing metasploit'
+info 'installing metasploit'
 
-    mkdir -p /tmp/metasploit
-    cd /tmp/metasploit
+mkdir -p /tmp/metasploit
+cd /tmp/metasploit
 
-    # Install metasploit
-    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+# Install metasploit
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 
-    chmod 755 msfinstall
-    ./msfinstall
+chmod 755 msfinstall
+./msfinstall
 
-    # Create msf database.
-    msfdb init
-else
-    skip 'metasploit'
-fi
+# Create msf database.
+msfdb init
+
 
 
 {{ end -}}

@@ -19,7 +19,7 @@ fi
 if ! [ -x "$(command -v nvim)" ]; then
     info '🖥️ Installing neovim'
     sudo apt update
-    sudo apt install neovim
+    sudo apt install -y neovim
     success 'neovim'
 else
     skip 'neovim'
