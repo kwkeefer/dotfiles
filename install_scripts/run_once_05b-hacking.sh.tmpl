@@ -2,22 +2,109 @@
 
 . "$(chezmoi source-path)/helpers"
 
-echo ''
-info '🖥️ Installing tldr'
-mise use -g npm:tldr
-success 'tldr'
+echo 'About to install hacker tools.'
+confirm_proceed
 
-info 'Installing anew'
-mise use -g go:github.com/tomnomnom/anew@latest
-success 'anew'
-
-info 'Installing assetfinder'
-mise use -g go:github.com/tomnomnom/assetfinder
-success 'assetfinder'
-
-info 'Installing gf'
-mise use -g go:github.com/tomnomnom/gf
-success 'gf'
+### Project Discovery
 
 echo ''
+info '🖥️ Installing nuclei'
+mise use -g go:github.com/projectdiscovery/nuclei@latest
+success 'nuclei'
 
+info '🖥️ Installing nuclei templates'
+mise use -g go:github.com/projectdiscovery/nuclei-templates@latest
+success 'nuclei-templates'
+
+info '🖥️ Installing katana'
+mise use -g go:github.com/projectdiscovery/katana@latest
+success 'katana'
+
+info '🖥️ Installing naabu'
+mise use -g go:github.com/projectdiscovery/naabu@latest
+success 'naabu'
+
+info '🖥️ Installing cvemap'
+mise use -g go:github.com/projectdiscovery/cvemap@latest
+success 'cvemap'
+
+info '🖥️ Installing proxify'
+mise use -g go:github.com/projectdiscovery/proxify@latest
+success 'proxify'
+
+info '🖥️ Installing tlsx'
+mise use -g go:github.com/projectdiscovery/tlsx@latest
+success 'tlsx'
+
+info '🖥️ Installing dnsx'
+mise use -g go:github.com/projectdiscovery/dnsx@latest
+success 'dnsx'
+
+info '🖥️ Installing subfinder'
+mise use -g go:github.com/projectdiscovery/subfinder@latest
+success 'subfinder'
+
+info '🖥️ Installing shuffledns'
+mise use -g go:github.com/projectdiscovery/shuffledns@latest
+success 'shuffledns'
+
+info '🖥️ Installing httpx'
+mise use -g go:github.com/projectdiscovery/httpx@latest
+success 'httpx'
+
+echo ''
+
+### Misc
+
+info '🖥️ Installing gau'
+mise use -g go:github.com/lc/gau/v2/cmd/gau@latest
+success 'gau'
+
+info '🖥️ Installing gowitness'
+mise use -g go:github.com/sensepost/gowitness@latest
+success 'gowitness'
+
+info '🖥️ Installing cook'
+mise use -g go:github.com/glitchedgitz/cook/v2/cmd/cook@latest
+success 'cook'
+
+## MACBOOK TOOLS
+{{ if eq .chezmoi.os "darwin" -}}
+
+if ! [ -x "$(command -v nmap)" ]; then
+    info '🖥️ Installing nmap'
+    brew install nmap
+    success 'nmap'
+else
+    skip 'nmap'
+fi
+
+## UBUNTU TOOLS
+{{ else if eq .chezmoi.os "linux" -}}
+
+if ! [ -x "$(command -v nmap)" ]; then
+    info '🖥️ Installing nmap'
+    sudo apt update
+    sudo apt install nmap
+    success 'nmap'
+else
+    skip 'nmap'
+fi
+
+if ! [ -x "$(command -v msfconsole)"]; then
+    info 'installing metasploit'
+
+    mkdir -p /tmp/metasploit
+    cd /tmp/metasploit
+
+    # Install metasploit
+    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+
+    chmod 755 msfinstall
+    ./msfinstall
+
+    # Create msf database.
+    msfdb init
+else
+    skip 'metasploit'
+fi
