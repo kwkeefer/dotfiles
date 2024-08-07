@@ -9,11 +9,11 @@ confirm_proceed
 
 echo ''
 info '🖥️ Installing nuclei'
-mise use -g go:github.com/projectdiscovery/nuclei@latest
+mise use -g go:github.com/projectdiscovery/nuclei/cmd/nuclei@latest
 success 'nuclei'
 
 info '🖥️ Installing nuclei templates'
-mise use -g go:github.com/projectdiscovery/nuclei-templates@latest
+mise use -g go:github.com/projectdiscovery/nuclei-templates/cmd/nuclei-templates@latest
 success 'nuclei-templates'
 
 info '🖥️ Installing katana'
