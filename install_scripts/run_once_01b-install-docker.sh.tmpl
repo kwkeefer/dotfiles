@@ -24,6 +24,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 {{ else if eq .chezmoi.os "darwin" -}}
 
-brew install docker docker-compose
+brew install docker docker-compose docker-credential-helper
 
 {{ end -}}
