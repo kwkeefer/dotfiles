@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. "$(chezmoi source-path)/helpers"
+
+{{ if eq .chezmoi.os "linux" -}}
+
+info 'installing i3 window manager'
+
+sudo apt install i3
+
+{{ end -}}
