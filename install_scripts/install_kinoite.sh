@@ -25,3 +25,4 @@ podman build -t keefer/fedoradev \
 distrobox create -i keefer/fedoradev -n fedoradev
 
 distrobox-enter fedoradev -- bash install_fedoradev.sh
+
