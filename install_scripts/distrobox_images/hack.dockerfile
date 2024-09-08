@@ -1,0 +1,1 @@
+FROM keefer/fedorabase:latest
