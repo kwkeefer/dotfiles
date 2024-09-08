@@ -14,15 +14,11 @@ for file in "$SCRIPT_DIR"/scripts/unixlike/*.sh; do
     source "$file"
 done
 
-# kinoite_base
-# set_fish_default
-# install_nerdfonts
-# install_starship
+install_utils_with_mise
+set_fish_default
+install_nerdfonts
+install_starship
 
-podman build -t keefer/fedoradev \
-    -f distrobox_images/dev.dockerfile .
+chezmoi init --apply kwkeefer
 
-distrobox create -i keefer/fedoradev -n fedoradev
-
-distrobox-enter fedoradev -- bash install_fedoradev.sh
-
+distrobox-export --app code

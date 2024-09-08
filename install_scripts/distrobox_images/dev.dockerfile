@@ -22,16 +22,8 @@ RUN mise use -g python@latest node@latest go@latest
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 RUN <<EOF
-tee -a /etc/yum.repos.d/vscodium.repo << EOY
-[gitlab.com_paulcarroty_vscodium_repo]
-name=gitlab.com_paulcarroty_vscodium_repo
-baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
-enabled=1
-gpgcheck=1
-repo_gpgcheck=1
-gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
-metadata_expire=1h
-EOY
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 EOF
 
 RUN <<EOF
@@ -46,7 +38,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOM
 EOF
 
-RUN dnf update -y && dnf install google-cloud-cli fish codium -y
+RUN dnf update -y && dnf install google-cloud-cli fish code -y
 RUN chsh -s /usr/bin/fish
 
 RUN fish -c "curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher"
@@ -56,3 +48,6 @@ ENV PATH=$HOME/.cargo/env.fish:$PATH
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin
 
+# must be run from install_scripts directory
+COPY scripts/unixlike/ /opt/install_scripts
+RUN chmod +x /opt/install_scripts/*
