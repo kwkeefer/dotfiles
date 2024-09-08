@@ -1,3 +1,6 @@
 {
-    "workbench.colorTheme": "Nu Disco Dark"
+    "workbench.colorTheme": "Nu Disco Dark",
+    "ruff.enable": true,
+    "ruff.fixAll": true,
+    "ruff.lineLength": 160
 }
