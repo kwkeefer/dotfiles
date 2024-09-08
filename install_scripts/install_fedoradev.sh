@@ -18,6 +18,7 @@ install_utils_with_mise
 set_fish_default
 install_nerdfonts
 install_starship
+install_vscode_extensions
 
 chezmoi init --apply kwkeefer
 
