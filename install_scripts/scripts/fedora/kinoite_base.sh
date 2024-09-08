@@ -1,9 +1,11 @@
 #!/bin/bash
 
 kinoite_base () {
-    rpm-ostree install distrobox \
+    rpm-ostree install --idempotent \
+        distrobox \
         alacritty \
-        neovim
+        neovim \
+        fish
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 }

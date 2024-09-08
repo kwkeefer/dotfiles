@@ -5,6 +5,6 @@ install_utils_with_uv () {
         echo "waymore is already installed"
     else
         echo "installing waymore..."
-        uvx install waymore
+        uv tool install waymore
     fi
 }

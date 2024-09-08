@@ -1,6 +1,13 @@
 #!/bin/bash
 
 install_utils_with_mise() {
+    if [ -x "$(command -v chezmoi)" ]; then
+        echo "chezmoi is already installed"
+    else
+        echo "installing chezmoi..."
+        mise use -g chezmoi
+    fi
+
     if [ -x "$(command -v anew)" ]; then
         echo "anew is already installed"
     else

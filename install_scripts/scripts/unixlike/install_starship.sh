@@ -5,7 +5,8 @@ install_starship() {
         echo "Starship is already installed"
     else
         echo "Installing Starship..."
-        curl -sS https://starship.rs/install.sh | sh
+        curl  https://starship.rs/install.sh -o /tmp/starship
+        sudo sh /tmp/starship -y
         echo "Starship installed!"
     fi
 }
