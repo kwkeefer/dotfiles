@@ -6,5 +6,5 @@ set_fish_default() {
         chsh -s $(which fish)
     else
         echo "fish is not installed"
-    fi
+    fi   
 }
