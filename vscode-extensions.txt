@@ -1,0 +1,4 @@
+dbanksdesign.nu-disco
+github.copilot
+github.copilot-chat
+ms-azuretools.vscode-docker
