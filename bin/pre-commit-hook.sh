@@ -7,3 +7,5 @@ git add vscode-extensions.txt
 
 chezmoi add ~/.config/Code/User/keybindings.json 
 chezmoi add ~/.config/Code/User/settings.json 
+chezmoi add ~/.config/kwinrc
+chezmoi add ~/.config/kglobalshortcutsrc
