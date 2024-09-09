@@ -1,0 +1,26 @@
+[Desktops]
+Id_1=730a6432-e95b-4b6e-9c88-71331108da65
+Number=1
+Rows=1
+
+[Plugins]
+kzonesEnabled=true
+tileseditorEnabled=false
+
+[Script-kzones]
+layoutsJson=[\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 25\n            },\n            {\n                "x": 25,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 75,\n                "y": 0,\n                "height": 100,\n                "width": 25\n            }\n        ]\n    },\n    {\n        "name": "Right Priority",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 30\n            },\n            {\n                "x": 30,\n                "y": 0,\n                "height": 100,\n                "width": 70\n            }\n        ]\n\n    },\n    {\n        "name": "Quadrant Grid",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 0,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    }\n]
+
+[Tiling]
+padding=4
+
+[Tiling][49430b83-32c3-5c04-92c6-b5d03f388f3d]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][7fb8c463-c102-5440-8fb7-5253b26b5d9c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][dc979efa-e4d7-5956-a69d-36254bb72745]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.2742675781250003},{"width":0.43710937499999897},{"width":0.28862304687500073}]}
+
+[Xwayland]
+Scale=1.75
