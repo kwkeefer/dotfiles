@@ -22,6 +22,7 @@ $kotlin\
 $haskell\
 $python\
 [](fg:color_blue bg:color_bg3)\
+$container\
 $docker_context\
 $conda\
 [](fg:color_bg3 bg:color_bg1)\
@@ -67,6 +68,11 @@ CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+
+[container]
+format = '[$symbol ]($style)'
+symbol = "󰆍 "
+style = "bg:color_bg3 fg:#83a598"
 
 [username]
 show_always = true
@@ -139,7 +145,7 @@ format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 [python]
 symbol = "🐍"
 style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+format = '[[ $symbol( $version) ( \($virtualenv\)) ](fg:color_fg0 bg:color_blue)]($style)'
 
 [docker_context]
 symbol = "🐋"
