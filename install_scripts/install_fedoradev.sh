@@ -14,11 +14,18 @@ for file in "$SCRIPT_DIR"/scripts/unixlike/*.sh; do
     source "$file"
 done
 
+
+mise settings set experimental true
+
+sudo mkdir -p $(go env GOMODCACHE)
+sudo chown -R keefer $(go env GOMODCACHE)
+
 install_utils_with_mise
+install_neovim
 set_fish_default
 install_nerdfonts
 install_starship
-install_vscode_extensions
+install_vs_code_extensions
 
 chezmoi init --apply kwkeefer
 
