@@ -17,7 +17,7 @@ RUN dnf install -y dnf-plugins-core \
     libffi-devel
 RUN dnf config-manager --add-repo https://mise.jdx.dev/rpm/mise.repo
 RUN dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
-RUN dnf install -y mise terraform awscli
+RUN dnf install -y mise terraform awscli jq
 
 RUN mise settings set experimental true
 RUN mise use -g python@latest node@latest go@latest
