@@ -6,5 +6,5 @@ set -u fish_greeting
 fish_vi_key_bindings
 
 # keep at end of file
-~/.local/bin/mise activate fish | source
+mise activate fish | source
 starship init fish | source
