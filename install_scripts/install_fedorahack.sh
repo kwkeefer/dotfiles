@@ -21,4 +21,3 @@ install_starship
 
 chezmoi init --apply kwkeefer
 
-distrobox-export --app code

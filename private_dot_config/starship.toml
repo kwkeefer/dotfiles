@@ -70,7 +70,7 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [container]
-format = '[$symbol ]($style)'
+format = '[$symbol]($style)'
 symbol = "󰆍 "
 style = "bg:color_bg3 fg:#83a598"
 

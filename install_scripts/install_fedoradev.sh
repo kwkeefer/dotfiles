@@ -23,3 +23,6 @@ install_vscode_extensions
 chezmoi init --apply kwkeefer
 
 distrobox-export --app code
+
+# fix vscode issue by linking go to /usr/bin
+sudo ln -s `mise which go` /usr/bin/go

@@ -3,6 +3,7 @@ dbanksdesign.nu-disco
 github.copilot
 github.copilot-chat
 golang.go
+hashicorp.terraform
 ms-azuretools.vscode-docker
 ms-python.debugpy
 ms-python.python

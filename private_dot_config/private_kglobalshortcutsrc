@@ -1,5 +1,5 @@
 [ActivityManager]
-_k_friendly_name=System Settings
+_k_friendly_name=Activity Manager
 switch-to-activity-47352b7f-378a-472c-88b4-7680f84f15d4=Meta+Ctrl+Alt+Shift+Down,none,Switch to activity "Activity 2"
 switch-to-activity-4fb53a46-d21a-4fb1-bf69-63781982403c=Meta+Ctrl+Alt+Shift+Up,none,Switch to activity "Default"
 
@@ -38,7 +38,7 @@ LogOut=none,,Log Out
 Reboot=none,,Reboot
 Reboot Without Confirmation=none,,Reboot Without Confirmation
 Shut Down=none,,Shut Down
-_k_friendly_name=KWin
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
@@ -79,9 +79,9 @@ KZones: Move active window to zone 8=none,none,KZones: Move active window to zon
 KZones: Move active window to zone 9=none,none,KZones: Move active window to zone 9
 KZones: Move active window up=none,none,KZones: Move active window up
 KZones: Snap active window=Meta+Shift+Space,none,KZones: Snap active window
-KZones: Snap all windows=,none,KZones: Snap all windows
-KZones: Switch to next window in current zone=,none,KZones: Switch to next window in current zone
-KZones: Switch to previous window in current zone=,none,KZones: Switch to previous window in current zone
+KZones: Snap all windows=none,none,KZones: Snap all windows
+KZones: Switch to next window in current zone=none,none,KZones: Switch to next window in current zone
+KZones: Switch to previous window in current zone=none,none,KZones: Switch to previous window in current zone
 KZones: Toggle zone overlay=Ctrl+Alt+C,none,KZones: Toggle zone overlay
 Kill Window=Meta+Ctrl+Esc,Meta+Ctrl+Esc,Kill Window
 Move Tablet to Next Output=none,none,Move the tablet to the next output
@@ -142,12 +142,12 @@ Toggle Night Color=none,none,Suspend/Resume Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
 Walk Through Windows=Alt+Tab,Alt+Tab,Walk Through Windows
 Walk Through Windows (Reverse)=Alt+Shift+Tab,Alt+Shift+Tab,Walk Through Windows (Reverse)
-Walk Through Windows Alternative=,,Walk Through Windows Alternative
-Walk Through Windows Alternative (Reverse)=,,Walk Through Windows Alternative (Reverse)
+Walk Through Windows Alternative=none,,Walk Through Windows Alternative
+Walk Through Windows Alternative (Reverse)=none,,Walk Through Windows Alternative (Reverse)
 Walk Through Windows of Current Application=Alt+`,Alt+`,Walk Through Windows of Current Application
 Walk Through Windows of Current Application (Reverse)=Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)
-Walk Through Windows of Current Application Alternative=,,Walk Through Windows of Current Application Alternative
-Walk Through Windows of Current Application Alternative (Reverse)=,,Walk Through Windows of Current Application Alternative (Reverse)
+Walk Through Windows of Current Application Alternative=none,,Walk Through Windows of Current Application Alternative
+Walk Through Windows of Current Application Alternative (Reverse)=none,,Walk Through Windows of Current Application Alternative (Reverse)
 Window Above Other Windows=none,,Keep Window Above Others
 Window Below Other Windows=none,,Keep Window Below Others
 Window Close=Alt+F4,Alt+F4,Close Window
