@@ -4,7 +4,7 @@ install_neovim(){
     # Install neovim
     if ! [ -x "$(command -v nvim)" ]; then
         echo "Installing neovim..."
-        sudo dnf install neovim
+        sudo dnf install -y neovim
     else
         echo "neovim is already installed"
     fi

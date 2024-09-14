@@ -1,9 +1,12 @@
 #!/bin/bash
 
-SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+install_vs_code_extensions () {
 
-while IFS= read -r line; do
-  code --install-extension $line
-done < $SCRIPT_DIR/../../../vscode-extensions.txt
+  SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
-echo "VS Code extensions installed!"
+  while IFS= read -r line; do
+    code --install-extension $line
+  done < $SCRIPT_DIR/../../../vscode-extensions.txt
+
+  echo "VS Code extensions installed!"
+}

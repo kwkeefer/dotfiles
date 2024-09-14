@@ -5,5 +5,19 @@
     "ruff.lineLength": 160,
     "explorer.confirmDelete": false,
     "editor.fontFamily": "FiraCode Nerd Font",
-    "terminal.integrated.fontFamily": "FiraCode Nerd Fontclear"
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.inheritEnv": true,
+    "go.alternateTools": {
+        "go-shellenv": "/opt/env.sh"
+    },
+    "go.toolsEnvVars": {
+        "GOPATH": "${env:GOPATH}",
+        "PATH": "${env:PATH}"
+    },
+    "go.useLanguageServer": true,
+    "go.languageServerFlags": [
+        "-rpc.trace",
+        "--debug=localhost:6060"
+    ],
 }
