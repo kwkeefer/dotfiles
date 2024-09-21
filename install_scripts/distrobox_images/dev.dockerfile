@@ -17,7 +17,7 @@ RUN dnf install -y dnf-plugins-core \
     libffi-devel
 RUN dnf config-manager --add-repo https://mise.jdx.dev/rpm/mise.repo
 RUN dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
-RUN dnf install -y mise terraform awscli jq docker tmux
+RUN dnf install -y mise terraform awscli jq tmux
 RUN mise use -g python@latest node@latest go@latest
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
@@ -51,3 +51,11 @@ ENV PATH=$PATH:$GOPATH/bin
 # must be run from install_scripts directory
 COPY scripts/unixlike/ /opt/install_scripts
 RUN chmod +x /opt/install_scripts/*
+
+# install AWS Session Manager Plugin
+RUN <<EOF
+cd /tmp
+curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm" -o "session-manager-plugin.rpm"
+rpm2cpio session-manager-plugin.rpm | cpio -idmv
+cp usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/local/bin/
+EOF

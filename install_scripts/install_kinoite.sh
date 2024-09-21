@@ -21,10 +21,10 @@ done
 
 podman build -t keefer/fedoradev \
     -f distrobox_images/dev.dockerfile .
-distrobox create -i keefer/fedoradev -n dev
+distrobox create -i keefer/fedoradev -n dev 
 distrobox-enter dev -- bash install_fedoradev.sh
 
 podman build -t keefer/fedorahack \
     -f distrobox_images/hack.dockerfile .
-distrobox create -i keefer/fedorahack -n hack
+distrobox create -i keefer/fedorahack -n hack --init
 distrobox-enter hack -- bash install_fedorahack.sh

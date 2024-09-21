@@ -31,5 +31,13 @@ chezmoi init --apply kwkeefer
 
 distrobox-export --app code
 
-# fix vscode issue by linking go to /usr/bin
-sudo ln -s `mise which go` /usr/bin/go
+if [ ! -f /usr/bin/go ]; then
+    # fix vscode issue by linking go to /usr/bin
+    sudo ln -s `mise which go` /usr/bin/go
+fi
+
+# use host podman
+if [ ! -f /usr/local/bin/podman ]; then
+    sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/podman
+fi
+
