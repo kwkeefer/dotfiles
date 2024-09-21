@@ -14,7 +14,7 @@ for file in "$SCRIPT_DIR"/scripts/unixlike/*.sh; do
     source "$file"
 done
 
-#kinoite_base
+kinoite_base
 #set_fish_default
 #install_nerdfonts
 #install_starship

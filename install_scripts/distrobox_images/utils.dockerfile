@@ -1,4 +1,4 @@
-FROM fedorabase:latest
+FROM localhost/keefer/fedorabase:latest
 
 RUN sudo dnf update && sudo dnf install -y \
     npm \

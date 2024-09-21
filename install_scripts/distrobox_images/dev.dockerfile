@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM docker.io/library/fedora:latest
 
 ## Install mise and set up development environment
 RUN dnf groupinstall -y "Development Tools"

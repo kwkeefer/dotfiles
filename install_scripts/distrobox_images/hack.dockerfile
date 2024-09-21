@@ -1,1 +1,1 @@
-FROM keefer/fedorabase:latest
+FROM localhost/keefer/fedorabase:latest
