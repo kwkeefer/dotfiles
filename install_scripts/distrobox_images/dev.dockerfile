@@ -59,3 +59,5 @@ curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64b
 rpm2cpio session-manager-plugin.rpm | cpio -idmv
 cp usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/local/bin/
 EOF
+
+RUN sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /usr/local/bin

@@ -7,12 +7,12 @@ fish_vi_key_bindings
 
 # keep at end of file
 
-if [ -x mise ]; then
+if command -v mise >/dev/null
     mise activate fish | source
-elif [ -f ~/.local/bin/mise ]; then
+else if test -f ~/.local/bin/mise
     ~/.local/bin/mise activate fish | source
-elif [ -f /usr/bin/mise ]; then
+else if test -f /usr/bin/mise
     /usr/bin/mise activate fish | source
-fi
+end
 
 starship init fish | source

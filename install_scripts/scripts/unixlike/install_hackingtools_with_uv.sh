@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install_utils_with_uv () {
+install_tools_with_uv () {
     if [ -x "$(command -v waymore)" ]; then
         echo "waymore is already installed"
     else

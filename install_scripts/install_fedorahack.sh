@@ -18,6 +18,9 @@ install_utils_with_mise
 set_fish_default
 install_nerdfonts
 install_starship
+install_hackingtools_with_mise
+install_uv
+install_tools_with_uv
 
 chezmoi init --apply kwkeefer
 

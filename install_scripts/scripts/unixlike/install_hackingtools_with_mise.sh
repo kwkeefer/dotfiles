@@ -1,6 +1,9 @@
 #!/bin/bash
 
 install_hackingtools_with_mise() {
+    sudo mkdir -p /go
+    sudo chown -R $USER /go
+
     binary_path="/home/$USER/.local/bin"
 
     mise use -g go:github.com/projectdiscovery/pdtm/cmd/pdtm@latest
