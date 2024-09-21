@@ -71,7 +71,7 @@ RedHatEnterprise = "󱄛"
 
 [container]
 format = '[$symbol]($style)'
-symbol = "🫙"
+symbol = " 🫙 "
 style = "bg:color_bg3 fg:#83a598"
 
 [username]
