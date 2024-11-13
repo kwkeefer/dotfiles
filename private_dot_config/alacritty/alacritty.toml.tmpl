@@ -25,7 +25,7 @@ blur = true
 history = 10000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 {{ if lookPath "fish" -}}
 program = '{{ output "which" "fish" | trim }}'
 args = ['--login']
